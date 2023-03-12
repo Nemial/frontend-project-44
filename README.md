@@ -6,3 +6,5 @@
 [Brain Games. Even](https://asciinema.org/a/AU2VfSIWPJ0Bqj4hdXgfTLfFh)
 
 [Brain Games. Calc](https://asciinema.org/a/A0lH1A0RKeb2PRNRt8mv40vJN)
+
+[Brain Games. GCD](https://asciinema.org/a/jMgJ0Eb16dvGFi0H0nadqj4Eg)
