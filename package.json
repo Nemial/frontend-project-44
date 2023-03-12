@@ -15,6 +15,10 @@
     "brain",
     "study"
   ],
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "author": "Nemial",
   "license": "ISC",
   "bugs": {
