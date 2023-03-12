@@ -1,5 +1,5 @@
-import readlineSync from 'readline-sync';
-import startGame, { getRandomNumber } from '../index.js';
+import startGame from '../index.js';
+import getRandomNumber from './getRandomNumber.js';
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
 
@@ -35,5 +35,5 @@ const getExpressionData = () => {
 };
 
 export default () => {
-  startGame(GAME_DESCRIPTION, getExpressionData, readlineSync.questionInt);
+  startGame(GAME_DESCRIPTION, getExpressionData);
 };

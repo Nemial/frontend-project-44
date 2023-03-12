@@ -1,5 +1,5 @@
-import readlineSync from 'readline-sync';
-import startGame, { getRandomNumber } from '../index.js';
+import startGame from '../index.js';
+import getRandomNumber from './getRandomNumber.js';
 
 const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -10,5 +10,5 @@ export default () => {
     const question = getRandomNumber();
     const answer = isEven(question) ? 'yes' : 'no';
     return [question, answer];
-  }, readlineSync.question);
+  });
 };
