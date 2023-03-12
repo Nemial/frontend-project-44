@@ -28,12 +28,14 @@ const getGcd = (firstNumber, secondNumber) => {
   return result;
 };
 
-export default () => {
-  startGame(GAME_DESCRIPTION, () => {
-    const firstNumber = getRandomNumber();
-    const secondNumber = getRandomNumber();
-    const answer = getGcd(firstNumber, secondNumber);
+const getAnswerAndQuestion = () => {
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
+  const answer = getGcd(firstNumber, secondNumber);
 
-    return [`${firstNumber} ${secondNumber}`, answer];
-  });
+  return [`${firstNumber} ${secondNumber}`, answer];
+};
+
+export default () => {
+  startGame(GAME_DESCRIPTION, getAnswerAndQuestion);
 };

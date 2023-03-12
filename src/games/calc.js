@@ -34,6 +34,8 @@ const getExpressionData = () => {
   return [`${firstOperand} ${operationSymbol} ${secondOperand}`, expressionResult];
 };
 
+const getAnswerAndQuestion = () => getExpressionData();
+
 export default () => {
-  startGame(GAME_DESCRIPTION, getExpressionData);
+  startGame(GAME_DESCRIPTION, getAnswerAndQuestion);
 };
