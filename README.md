@@ -8,3 +8,5 @@
 [Brain Games. Calc](https://asciinema.org/a/A0lH1A0RKeb2PRNRt8mv40vJN)
 
 [Brain Games. GCD](https://asciinema.org/a/jMgJ0Eb16dvGFi0H0nadqj4Eg)
+
+[Brain Games. Progression](https://asciinema.org/a/LHFwF9VgSdeGAbNzyX1Az9Rdg)
