@@ -10,3 +10,5 @@
 [Brain Games. GCD](https://asciinema.org/a/jMgJ0Eb16dvGFi0H0nadqj4Eg)
 
 [Brain Games. Progression](https://asciinema.org/a/LHFwF9VgSdeGAbNzyX1Az9Rdg)
+
+[Brain Games. Prime](https://asciinema.org/a/4J6JPqSmxN1OKvEmf4fk3Cm7A)
