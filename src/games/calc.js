@@ -32,7 +32,7 @@ const getExpressionData = () => {
   const firstOperand = getRandomNumber(0, 450);
   const secondOperand = getRandomNumber(0, 450);
 
-  const expressionResult = getExpressionResult();
+  const expressionResult = getExpressionResult(operationSymbol, firstOperand, secondOperand);
 
   return [`${firstOperand} ${operationSymbol} ${secondOperand}`, expressionResult];
 };
