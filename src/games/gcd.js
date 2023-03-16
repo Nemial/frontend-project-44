@@ -1,26 +1,17 @@
-import getRandomNumber from '../getRandomNumber.js';
+import getRandomNumber from '../helpers.js';
 import startGame from '../index.js';
 
 const GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (firstNumber, secondNumber) => {
-  let biggestNumber;
-  let smallestNumber;
-
-  if (firstNumber < secondNumber) {
-    biggestNumber = secondNumber;
-    smallestNumber = firstNumber;
-  } else {
-    biggestNumber = firstNumber;
-    smallestNumber = secondNumber;
-  }
+  const iterationCount = firstNumber < secondNumber ? secondNumber : firstNumber;
 
   let result;
 
-  for (let i = 1; i <= biggestNumber / 2; i += 1) {
-    const canDivideBiggestNumber = biggestNumber % i === 0;
-    const canDivideSmallestNumber = smallestNumber % i === 0;
-    if (canDivideBiggestNumber && canDivideSmallestNumber) {
+  for (let i = 1; i <= iterationCount / 2; i += 1) {
+    const canDivideFirstNumber = firstNumber % i === 0;
+    const canDivideSecondNumber = secondNumber % i === 0;
+    if (canDivideFirstNumber && canDivideSecondNumber) {
       result = i;
     }
   }

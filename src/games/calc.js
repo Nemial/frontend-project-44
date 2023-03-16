@@ -1,41 +1,42 @@
-import getRandomNumber from '../getRandomNumber.js';
+import getRandomNumber from '../helpers.js';
 import startGame from '../index.js';
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
 
-const getExpressionData = () => {
-  const operationSymbols = ['+', '-', '*'];
-  const firstIndex = 0;
-  const lastIndex = operationSymbols.length - 1;
-  const operationIndex = getRandomNumber(firstIndex, lastIndex);
-  const operationSymbol = operationSymbols[operationIndex];
+const getExpressionResult = (operator, firstOperand, secondOperand) => {
+  let result;
 
-  const minNumber = 0;
-  const maxNumber = 450;
-  const firstOperand = getRandomNumber(minNumber, maxNumber);
-  const secondOperand = getRandomNumber(minNumber, maxNumber);
-
-  let expressionResult = 0;
-
-  switch (operationSymbol) {
+  switch (operator) {
     case '+':
-      expressionResult = firstOperand + secondOperand;
+      result = firstOperand + secondOperand;
       break;
     case '-':
-      expressionResult = firstOperand - secondOperand;
+      result = firstOperand - secondOperand;
       break;
     case '*':
-      expressionResult = firstOperand * secondOperand;
+      result = firstOperand * secondOperand;
       break;
     default:
-      console.log(`Undefined operation symbol ${operationSymbol}`);
+      result = 0;
+      console.log(`Undefined operation symbol ${operator}`);
   }
+
+  return result;
+};
+
+const getExpressionData = () => {
+  const operationSymbols = ['+', '-', '*'];
+  const operationIndex = getRandomNumber(0, operationSymbols.length - 1);
+  const operationSymbol = operationSymbols[operationIndex];
+
+  const firstOperand = getRandomNumber(0, 450);
+  const secondOperand = getRandomNumber(0, 450);
+
+  const expressionResult = getExpressionResult();
 
   return [`${firstOperand} ${operationSymbol} ${secondOperand}`, expressionResult];
 };
 
-const getAnswerAndQuestion = () => getExpressionData();
-
 export default () => {
-  startGame(GAME_DESCRIPTION, getAnswerAndQuestion);
+  startGame(GAME_DESCRIPTION, getExpressionData);
 };

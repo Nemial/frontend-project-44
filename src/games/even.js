@@ -1,4 +1,4 @@
-import getRandomNumber from '../getRandomNumber.js';
+import getRandomNumber from '../helpers.js';
 import startGame from '../index.js';
 
 const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
