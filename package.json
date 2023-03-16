@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "Study project of brain games",
+  "description": "Console arithmetic games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
